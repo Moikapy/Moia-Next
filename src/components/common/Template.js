@@ -1,19 +1,22 @@
 import Head from "next/head";
+import Navbar from '../Navbar'
 import Package from "../../../package.json";
-const Container = ({title,className,children}) =>(
-    <span>
-        <Head>
-            <title>{title||Package.name}</title>
-            <meta
-                name="viewport"
-                content="initial-scale=1.0, width=device-width"
-                key="viewport"
-                />
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
-        </Head>
-        <div className={className}>
-            {children}
-        </div>
-    </span>
-)
+const {name}=Package;
+const Container = ({ title, className, children }) => (
+  <span>
+    <Head>
+      <title>{title || name}</title>
+      <meta
+        name="viewport"
+        content="initial-scale=1.0, width=device-width"
+        key="viewport"
+      />
+      <link rel="stylesheet" href="./static/bootstrap.min.css" />
+    </Head>
+    <Navbar />
+    <div className={className}>{children}</div>
+      <script href="./static/bootstrap.min.js" />
+      <script href="./static/jquery3.3.1.min.js" />
+  </span>
+);
 export default Container
