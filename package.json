@@ -1,13 +1,15 @@
 {
   "name": "moi-next",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "export": "next export",
+    "static": "yarn build && yarn export",
+    "heroku-postbuild": "next build && next export"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +22,7 @@
     "react-markdown": "^4.0.6"
   },
   "devDependencies": {
-    "serve": "^10.1.2"
+    "serve": "^10.1.2",
+    "yarn": "^1.13.0"
   }
 }
