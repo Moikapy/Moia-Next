@@ -1,6 +1,5 @@
 import { Template} from '../src/components/common'
 import HelloWorld from '../src/components/HelloWorld'
-import {FetchInitialProps} from "../src/util";
 const Index = () => (
     <Template title={'Moi Next'} className={"container mx-auto mt-5 h-100"}>
         <HelloWorld>

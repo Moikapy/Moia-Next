@@ -1,12 +1,15 @@
 {
   "name": "moi-next",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p $PORT",
+    "export": "next export",
+    "static": "yarn build && yarn export",
+    "heroku-postbuild": "next build && next export"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +18,11 @@
     "isomorphic-unfetch": "^3.0.0",
     "next": "^8.0.3",
     "react": "^16.8.5",
-    "react-dom": "^16.8.5"
+    "react-dom": "^16.8.5",
+    "react-markdown": "^4.0.6"
+  },
+  "devDependencies": {
+    "serve": "^10.1.2",
+    "yarn": "^1.13.0"
   }
 }
