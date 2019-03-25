@@ -1,5 +1,5 @@
 const Router = {
     Home: '/',
-    About:'/about'
+    About: '/about'
 }
-export default  Router
+export default Router
